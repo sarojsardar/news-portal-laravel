@@ -21,8 +21,6 @@ return new class extends Migration
             $table->json('metadata')->nullable(); // dimensions, duration, etc.
             $table->unsignedTinyInteger('sort_order')->default(0);
             $table->timestamps();
-            
-            $table->index(['attachable_type', 'attachable_id']);
         });
     }
 
